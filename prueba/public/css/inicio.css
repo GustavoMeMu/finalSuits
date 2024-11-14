@@ -1,0 +1,104 @@
+body {
+    background-color: #00DBDE;
+background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+    font-family: 'Arial', sans-serif; /* Fuente general */
+}
+
+h3 {
+    font-size: 3rem;
+    color: #ffffff; /* Color azul oscuro */
+    text-align: center; /* Centrado */
+}
+
+p {
+    text-align: center; /* Centrado */
+    color: #000000; /* Color para el correo */
+    font-size: 1.8rem; /* Tamaño de fuente para el correo */
+    text-decoration: underline; /* Subrayado */
+}
+
+form {
+    max-width: 450px; /* Hacer el formulario más pequeño */
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #00DBDE;
+background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.input-group-text {
+    background-color: #008cff; /* Color de fondo del icono azul */
+    color: #fff; /* Color blanco para el icono */
+}
+
+.table {
+    width: 80%; /* Ancho de la tabla ajustado */
+    margin-left: 200px; /* Mueve la tabla 20px a la derecha */
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #1e3a5f; /* Bordes más oscuros */
+    border-radius: 10px;
+    overflow: hidden; /* Para aplicar bordes redondeados */
+}
+
+.table th, .table td {
+    padding: 10px; /* Espaciado ajustado */
+    text-align: center;
+    font-size: 1rem;
+    color: #1e3a5f;
+    border-bottom: 1px solid #1e3a5f; /* Añadido borde inferior */
+}
+
+.table thead {
+    background-color: #4b86b4; /* Azul más oscuro para encabezados */
+    color: white;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: rgba(160, 196, 255, 0.3); /* Azul claro para filas pares */
+}
+
+.table tbody tr:hover {
+    background-color: rgba(160, 196, 255, 0.5); /* Azul claro al pasar el mouse */
+}
+
+.action-btn {
+    padding: 8px 12px; /* Ajuste del padding */
+    background-color: #001fb8;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 0.9rem; /* Tamaño de fuente reducido */
+    transition: background-color 0.3s ease;
+}
+
+.action-btn:hover {
+    background-color: #1e3a5f; /* Azul oscuro al pasar el mouse */
+}
+
+.registrar_producto {
+    background-color: #80bfff; /* Azul pastel */
+    border-radius: 15px;
+    color: #1e3a5f;
+    font-size: 1.2rem; /* Tamaño de fuente ajustado */
+    transition: transform 0.3s ease;
+}
+
+.registrar_producto:hover {
+    transform: scale(1.05);
+}
+
+.modal-content {
+    background-color: rgba(0, 167, 186, 0.432);
+    border-radius: 10px;
+}
+
+.modal-header {
+    background-color: #008cff;
+    color: white;
+}
+
+.modal-footer {
+    border-top: none;
+}
