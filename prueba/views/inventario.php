@@ -44,36 +44,3 @@ if (!isset($_SESSION['usuario'])) {
                     </tr>
                 </tbody>
             </table>
-
-    <div class="modal fade" id="editarUsuarioModal" tabindex="-1" aria-labelledby="editarUsuarioModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="editarUsuarioModalLabel">Editar Usuario</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="mb-3">
-                        <label for="editNombre" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="editNombre" placeholder="Nombre">
-                    </div>
-                    <div class="mb-3">
-                        <label for="editApellido" class="form-label">Apellido</label>
-                        <input type="text" class="form-control" id="editApellido" placeholder="Apellido">
-                    </div>
-                    <div class="mb-3">
-                        <label for="editEmail" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="editEmail" placeholder="Email">
-                    </div>
-                    <div class="mb-3">
-                        <label for="editPassword" class="form-label">Nueva Contraseña</label>
-                        <input type="password" class="form-control" id="editPassword" placeholder="Contraseña Actual" value="">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-success" id="guardarCambios">Guardar Cambios</button>
-                </div>
-            </div>
-        </div>
-    </div>
