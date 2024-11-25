@@ -5,7 +5,7 @@ if (!isset($_SESSION)) {
 ?>
 <style>
     nav {
-        background-color: #f8c8dc; /* Rosa pastel */
+background-color: grey;
         padding: 1rem;
         display: flex;
         justify-content: space-between;
@@ -13,7 +13,10 @@ if (!isset($_SESSION)) {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
         color: #333;
+        margin-left: 0%;
+        align-items:end;
     }
+
 
     .text-center {
         display: flex;
@@ -22,8 +25,8 @@ if (!isset($_SESSION)) {
     }
 
     .text-center h3 {
-        margin: 0;
-        color: #333;
+        margin-left: -20%;
+        color: white;
         align-items: center;
     }
 
@@ -35,6 +38,7 @@ if (!isset($_SESSION)) {
     .button-container {
         display: flex;
         gap: 0.5rem;
+        margin-left: -20%;
     }
 </style>
 
@@ -56,7 +60,7 @@ if (!isset($_SESSION)) {
         </button>
     <?php endif; ?>
     <div class="button-container">
-        
+
         <?php if (isset($_SESSION['usuario'])): ?>
             <button class="btn btn-info me-2" id="btn-inventario" onclick="window.location.href='inventario'">
                 Inventario
@@ -72,34 +76,34 @@ if (!isset($_SESSION)) {
 </nav>
 
 <div class="modal fade" id="editarUsuarioModal" tabindex="-1" aria-labelledby="editarUsuarioModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="editarUsuarioModalLabel">Editar Usuario</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editarUsuarioModalLabel">Editar Usuario</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="editNombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="editNombre" placeholder="Nombre">
                 </div>
-                <div class="modal-body">
-                    <div class="mb-3">
-                        <label for="editNombre" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="editNombre" placeholder="Nombre">
-                    </div>
-                    <div class="mb-3">
-                        <label for="editApellido" class="form-label">Apellido</label>
-                        <input type="text" class="form-control" id="editApellido" placeholder="Apellido">
-                    </div>
-                    <div class="mb-3">
-                        <label for="editEmail" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="editEmail" placeholder="Email">
-                    </div>
-                    <div class="mb-3">
-                        <label for="editPassword" class="form-label">Nueva Contraseña</label>
-                        <input type="password" class="form-control" id="editPassword" placeholder="Contraseña Actual" value="">
-                    </div>
+                <div class="mb-3">
+                    <label for="editApellido" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="editApellido" placeholder="Apellido">
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-success" id="guardarCambios">Guardar Cambios</button>
+                <div class="mb-3">
+                    <label for="editEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="editEmail" placeholder="Email">
                 </div>
+                <div class="mb-3">
+                    <label for="editPassword" class="form-label">Nueva Contraseña</label>
+                    <input type="password" class="form-control" id="editPassword" placeholder="Contraseña Actual" value="">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success" id="guardarCambios">Guardar Cambios</button>
             </div>
         </div>
     </div>
+</div>

@@ -1,8 +1,9 @@
-<head> <link rel="stylesheet" href="../public/css/registro_vista.css"></head>
+<head> <link rel="stylesheet" href="./public/css/registro_vista.css"></head>
 <body class="d-flex justify-content-center align-items-center mt-5 p-3">
     <form action="./registro_vista.php" method="post" class="w-50 p-4 text-center">
         <div class="text-center mb-4 c-user">
-            <h2 class="text-white d-inline-block mx-2">Registro</h2>
+            <img src="./public/css/img/Dyzforia pagina.jpg" alt="" style="width: 50%;">
+            <h2 class="text d-inline-block mx-2">Registro</h2>
         </div>
         <div class="input-group mt-3 c-input px-2 p-1 rounded-3">
             <i class="bi bi-person-fill fs-3 text-white mx-1"></i>

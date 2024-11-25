@@ -4,10 +4,11 @@ if (isset($_SESSION['usuario'])) {
     exit;
 }
 ?>
+<head> <link rel="stylesheet" href="./public/css/registro_vista.css"></head>
 <form class="w-50 p-5" id="login-form">
         <div class="text-center mb-5 c-user">
-            <i class="bi bi-person-circle fs-1 text-highlight"></i>
-            <div class="text-highlight fs-4">Iniciar Sesión</div>
+            <img src="./public/css/img/Dyzforia pagina.jpg" alt="" style="width: 60%;">
+            
         </div>
         <div class="input-group mt-3">
             <i class="bi bi-person-fill input-group-text fs-2"></i>
@@ -18,11 +19,11 @@ if (isset($_SESSION['usuario'])) {
             <input type="password" id="pass-id" class="form-control fs-4" placeholder="contraseña" name="pass" required>
         </div>
         <div class="mt-5 c-button">
-            <button type="button" id="btn-saludar" class="btn w-100 fs-4">Ingresar</button>
+            <button type="button" id="btn-saludar" class="btn w-100 fs-4" style="background-color: grey">Ingresar</button>
         </div>
         <div class="mt-4 d-flex justify-content-center">
-            <p class="text-white">¿No tienes una cuenta?</p> 
-            <a href="registro" class="text-primary mx-3">Crear</a>
+            <p class="text" style="color:black;">¿No tienes una cuenta?</p> 
+            <a href="registro" class="text-primary mx-3" style="font-size: 1.5rem;">Crear</a>
         </div>
     </form>
 
