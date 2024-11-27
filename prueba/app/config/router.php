@@ -23,6 +23,10 @@
             require_once './views/inventario.php';       
             break;
         }
+        case "fechas_proximas":{
+            require_once './views/fechas.php';
+        break;
+        }
         default:
         require_once './views/error.php';       
         

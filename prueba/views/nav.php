@@ -5,7 +5,7 @@ if (!isset($_SESSION)) {
 ?>
 <style>
     nav {
-background-color: grey;
+        background-color: grey;
         padding: 1rem;
         display: flex;
         justify-content: space-between;
@@ -13,37 +13,55 @@ background-color: grey;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
         color: #333;
-        margin-left: 0%;
-        align-items:end;
+        flex-wrap: wrap;
+        /* Permite que los elementos se acomoden en varias filas */
     }
-
 
     .text-center {
         display: flex;
         flex-direction: column;
         align-items: center;
+        flex-grow: 1;
+        margin-bottom: 0.5rem;
+        /* Espacio entre elementos en pantallas pequeñas */
     }
 
     .text-center h3 {
-        margin-left: -20%;
-        color: white;
-        align-items: center;
-    }
-
-    .text-center p {
         margin: 0;
-        color: #555;
+        color: white;
+        text-align: center;
     }
 
     .button-container {
         display: flex;
         gap: 0.5rem;
-        margin-left: -20%;
+        flex-wrap: wrap;
+        /* Permite que los botones se acomoden en varias filas */
+        justify-content: center;
+        /* Centra los botones en pantallas pequeñas */
+    }
+
+    /* Ajustes adicionales para pantallas pequeñas */
+    @media (max-width: 576px) {
+        nav {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .text-center h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .button-container {
+            width: 100%;
+            justify-content: center;
+        }
     }
 </style>
 
 <nav>
-    <button class="btn btn-info me-2" id="btn-inicio" onclick="window.location.href='inicio'">
+    <button class="btn btn-warning me-2" id="btn-inicio" onclick="window.location.href='inicio'">
         Inicio
     </button>
     <div class="text-center">
@@ -51,22 +69,28 @@ background-color: grey;
     </div>
     <div>
         <?php if (isset($_SESSION['usuario'])): ?>
-            <p><?= $_SESSION['usuario']['nombre'] ?></p>
+            <p class="text-white" style="margin-left: -200%; font-size:300%;"><?= $_SESSION['usuario']['nombre'] ?></p>
         <?php endif; ?>
     </div>
     <?php if (!isset($_SESSION['usuario'])): ?>
-        <button class="btn btn-info me-2" id="btn-login" onclick="window.location.href='login'">
+        <button class="btn btn-warning me-2" id="btn-login" onclick="window.location.href='login'">
             Login
         </button>
     <?php endif; ?>
     <div class="button-container">
-
         <?php if (isset($_SESSION['usuario'])): ?>
-            <button class="btn btn-info me-2" id="btn-inventario" onclick="window.location.href='inventario'">
-                Inventario
-            </button>
-            <button class="btn btn-secondary me-2" id="btn-edita " data-bs-toggle="modal" data-bs-target="#editarUsuarioModal">
-                Editar Sesión
+            <?php if ($_SESSION['usuario']['email'] === 'admin@admin.com'): ?>
+                <button class="btn btn-warning me-2" id="btn-inventario" onclick="window.location.href='inventario'">
+                    Inventario
+                </button>
+            <?php else: ?>
+                <button class="btn btn-warning me-2" id="btn-fechas" onclick="window.location.href='fechas_proximas'">
+                    Fechas Próximas
+                </button>
+                <button class="btn btn-secondary me-2" id="btn-edita" data-bs-toggle="modal" data-bs-target="#editarUsuarioModal">
+                    Editar Sesión
+                </button>
+            <?php endif; ?>
             </button>
             <button class="btn btn-danger" id="btn-cerrar">
                 Cerrar sesión
