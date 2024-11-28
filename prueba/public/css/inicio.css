@@ -1,9 +1,13 @@
 body {
-background-image: url('../css/img/fondoo.jpg');
+background-image: url('../css/img/fondooo.jpg');
+
+background-position: 0%;
 
     font-family: 'Arial', sans-serif; /* Fuente general */
 }
-
+h1{
+    color: rgb(240, 206, 15);
+}
 h3 {
     font-size: 3rem;
     color: #ffffff; /* Color azul oscuro */
@@ -100,4 +104,86 @@ background-color: #fff;
 
 .modal-footer {
     border-top: none;
+}
+/* General container for the cards */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 30px; /* Increased gap between the cards */
+    margin-top: 20px;
+}
+
+/* Card styles */
+.card {
+
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for a light touch */
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    padding: 20px; /* Increased padding for more space inside the card */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: flex-start; 
+    height: 550px; /* Increased height for better image display */
+}
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Image styles */
+.card-image {
+    width: 50%;
+    height: 300px; /* Increased height for better image visibility */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px; 
+}
+
+/* Card info styles */
+
+
+.product-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #9b59b6; /* Soft lavender for the product name */
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e74c3c; /* Soft coral color for price */
+    padding: 5px;
+    background-color: #ffe4e1; /* Very light coral background for price */
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.btn-action {
+    background-color: #000000; /* Lavender for the action button */
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.btn-action:hover {
+    background-color: #ffffff; /* Slightly darker lavender for hover effect */
+}
+
+/* Responsive Design: Stack the cards for smaller screens */
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 480px){
+    .cards-comtainer{
+        grid-template-columns: 1fr;
+    }
 }
