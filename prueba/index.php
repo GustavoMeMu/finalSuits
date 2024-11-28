@@ -34,6 +34,10 @@ require_once("./app/config/rutas.php");
     <script src="./public/js/registro_productos.js"></script>
     <script src="./public/js/cerrar_session.js"></script>
     <script src="./public/js/main.js"></script>
+     <!-- Incluir footer solo en home.php -->
+     <?php if (basename($_SERVER['PHP_SELF']) === 'home.php'): ?>
+        <?php require_once("./views/footer.php"); ?>
+    <?php endif; ?>
 </body>
 
 </html>    

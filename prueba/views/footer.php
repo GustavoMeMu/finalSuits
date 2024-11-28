@@ -1,4 +1,4 @@
-<footer>
+<footer class="mt-auto">
     <div class="footer-container">
         <div class="footer-logo">
             <h3>🎵 Empresa Musical</h3>
@@ -15,16 +15,13 @@
             <a href="#"><i class="fab fa-youtube"></i></a>
         </div>
         <div class="footer-copy">
-            <p>© 2019 Empresa Musical. Todos los derechos reservados.  © Zeus Records</p>
+            <p>© 2019 Empresa Musical. Todos los derechos reservados. © Zeus Records</p>
         </div>
     </div>
 </footer>
 
 <style>
     footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
         background-color: #333; /* Fondo oscuro */
         color: white;
         text-align: center;
@@ -32,9 +29,7 @@
         font-family: 'Arial', sans-serif;
         box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
     }
-p{
-    color: white;
-}
+
     .footer-container {
         max-width: 1200px;
         margin: 0 auto;
@@ -42,42 +37,16 @@ p{
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-        color: white;
     }
 
-    .footer-logo h3 {
-        margin: 0;
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
-
-    .footer-links a {
+    .footer-links a, .footer-social a {
         color: white;
         margin: 0 10px;
         text-decoration: none;
-        font-size: 0.9rem;
     }
 
-    .footer-links a:hover {
+    .footer-links a:hover, .footer-social a:hover {
         text-decoration: underline;
-    }
-
-    .footer-social a {
-        margin: 0 10px;
-        color: white;
-        font-size: 1.2rem;
-        transition: color 0.3s ease;
-    }
-
-    .footer-social a:hover {
-        color: #ffcc00; /* Amarillo brillante */
-        color: white;
-    }
-
-    .footer-copy {
-        font-size: 0.8rem;
-        margin-top: 0.5rem;
-        color: white;
     }
 </style>
 
