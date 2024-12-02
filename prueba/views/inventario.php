@@ -160,6 +160,7 @@ body {
     </tbody>
 </table>
 
+<!-- Modal de Editar Usuario -->
 <div class="modal fade" id="editarUsuarioModal" tabindex="-1" aria-labelledby="editarUsuarioModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -168,17 +169,18 @@ body {
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
+                <!-- Campos del formulario de edición -->
                 <div class="mb-3">
                     <label for="editNombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="editNombre" placeholder="Nombre">
+                    <input type="text" class="form-control" id="editNombre" placeholder="Nombre" value="<?= $_SESSION['usuario']['nombre'] ?>">
                 </div>
                 <div class="mb-3">
                     <label for="editApellido" class="form-label">Apellido</label>
-                    <input type="text" class="form-control" id="editApellido" placeholder="Apellido">
+                    <input type="text" class="form-control" id="editApellido" placeholder="Apellido" value="<?= $_SESSION['usuario']['apellido'] ?>">
                 </div>
                 <div class="mb-3">
                     <label for="editEmail" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="editEmail" placeholder="Email">
+                    <input type="email" class="form-control" id="editEmail" placeholder="Email" value="<?= $_SESSION['usuario']['email'] ?>">
                 </div>
                 <div class="mb-3">
                     <label for="editPassword" class="form-label">Nueva Contraseña</label>
@@ -192,3 +194,13 @@ body {
         </div>
     </div>
 </div>
+
+<script>
+    // Al abrir el modal, autocompletar los datos del usuario
+    $('#editarUsuarioModal').on('show.bs.modal', function () {
+        // Obtener los datos del usuario desde la sesión y asignarlos a los campos
+        $('#editNombre').val("<?= $_SESSION['usuario']['nombre'] ?>");
+        $('#editApellido').val("<?= $_SESSION['usuario']['apellido'] ?>");
+        $('#editEmail').val("<?= $_SESSION['usuario']['email'] ?>");
+    });
+</script>

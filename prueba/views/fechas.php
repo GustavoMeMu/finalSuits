@@ -82,10 +82,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['metodo']) && $_POST['m
     <table id="myTable" class="display">
         <thead>
             <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Nombre</th>
+                <th scope="col">Zona</th>
                 <th scope="col">Precio</th>
-                <th scope="col">Cantidad</th>
+                <th scope="col">Disponibilidad</th>
+                <th scope="col"></th>
             </tr>
         </thead>
         <tbody id="tabla_productos">
@@ -132,6 +132,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['metodo']) && $_POST['m
             // Cargar los datos cuando la página se cargue
             cargarDatos();
         });
+        
     </script>
 </body>
 
