@@ -81,11 +81,11 @@ if (!isset($_SESSION)) {
         <?php if (isset($_SESSION['usuario'])): ?>
             <?php if ($_SESSION['usuario']['email'] === 'admin@admin.com'): ?>
                 <button class="btn btn-warning me-2" id="btn-inventario" onclick="window.location.href='inventario'">
-                    Inventario
+                    Boletaje proximo evento
                 </button>
             <?php else: ?>
                 <button class="btn btn-warning me-2" id="btn-fechas" onclick="window.location.href='fechas_proximas'">
-                    Fechas Próximas
+                    Boletaje proximo evento
                 </button>
                 <button class="btn btn-secondary me-2" id="btn-edita" data-bs-toggle="modal" data-bs-target="#editarUsuarioModal">
                     Editar Sesión

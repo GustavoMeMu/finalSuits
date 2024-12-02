@@ -601,7 +601,7 @@ div.dt-container .dt-input {
   border-radius: 3px;
   padding: 5px;
   background-color: transparent;
-  color: inherit;
+  color: white;
 }
 div.dt-container select.dt-input {
   padding: 4px;
@@ -668,7 +668,7 @@ div.dt-container .dt-search,
 div.dt-container .dt-info,
 div.dt-container .dt-processing,
 div.dt-container .dt-paging {
-  color: inherit;
+  color: white ;
 }
 div.dt-container .dataTables_scroll {
   clear: both;

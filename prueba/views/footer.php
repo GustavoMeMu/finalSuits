@@ -15,7 +15,7 @@
             <a href="#"><i class="fab fa-youtube"></i></a>
         </div>
         <div class="footer-copy">
-            <p>© 2019 Empresa Musical. Todos los derechos reservados. © Zeus Records</p>
+            <p style="color: #fff; margin-left: 20%;">© 2019 Empresa Musical. Todos los derechos reservados. © Zeus Records</p>
         </div>
     </div>
 </footer>
