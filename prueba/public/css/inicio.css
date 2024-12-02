@@ -106,25 +106,21 @@ background-color: #fff;
     border-top: none;
 }
 /* General container for the cards */
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
-    gap: 30px; /* Increased gap between the cards */
-    margin-top: 20px;
-}
+
 
 /* Card styles */
 .card {
-
     border-radius: 15px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for a light touch */
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
-    padding: 20px; /* Increased padding for more space inside the card */
+    padding: 30px; /* Increased padding for more space inside the card */
     display: flex;
     flex-direction: column; /* Stack elements vertically */
-    justify-content: flex-start; 
     height: 550px; /* Increased height for better image display */
+    background-color: rgba(96, 97, 91, 0.171); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Adds a blur effect for a frosted glass look */
+    color: #e39b00;
 }
 
 /* Hover effect */
@@ -134,32 +130,36 @@ background-color: #fff;
 
 /* Image styles */
 .card-image {
-    width: 50%;
-    height: 300px; /* Increased height for better image visibility */
+
+    height: 100%;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 20px; 
+    color: #e39b00;
 }
 
 /* Card info styles */
-
-
-.product-name {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #9b59b6; /* Soft lavender for the product name */
-    margin-bottom: 10px;
+.cards-container {
+    display: grid;
+    grid-template-areas: 
+        "card1 card2 card3 card4"
+        "card5 card5 card5 card5"
+        "card6 card6 card6 card6"
+        "card7 card8 card9 card10";
+    gap: 30px; /* Espacio entre las tarjetas */
+    margin-top: 20px;
 }
 
-.product-price {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #e74c3c; /* Soft coral color for price */
-    padding: 5px;
-    background-color: #ffe4e1; /* Very light coral background for price */
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
+.card:nth-child(1) { grid-area: card1; }
+.card:nth-child(2) { grid-area: card2; }
+.card:nth-child(3) { grid-area: card3; }
+.card:nth-child(4) { grid-area: card4; }
+.card:nth-child(5) { grid-area: card5; }
+.card:nth-child(6) { grid-area: card6; }
+.card:nth-child(7) { grid-area: card7; }
+.card:nth-child(8) { grid-area: card8; }
+.card:nth-child(9) { grid-area: card9; }
+.card:nth-child(10) { grid-area: card10; }
 
 .btn-action {
     background-color: #000000; /* Lavender for the action button */
